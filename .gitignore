@@ -1,0 +1,5 @@
+# 画像の元データ（ゲームは assets/chars の圧縮済み画像だけを使う）
+assets/chars_src/
+# ローカル開発の設定
+.claude/
+*.log

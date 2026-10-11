@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>NAPOLEON tests</title>
+</head>
+<body style="font-family: monospace; background: #fff; color: #111; padding: 16px;">
+  <pre id="out"></pre>
+  <script src="js/engine.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/tutorial.js"></script>
+  <script src="js/tests.js"></script>
+  <script>
+    const out = document.getElementById('out');
+    const log = (t) => { out.textContent += t + '\n'; };
+    log('ルールテスト（仕様13章）');
+    NP.runRuleTests(log);
+    log('\nチュートリアル台本');
+    for (const L of NP.Tutorial.LESSONS) {
+      const r = NP.Tutorial.simulate(L);
+      log((r.errors.length ? 'FAIL ' : 'ok   ') + L.title + ' ' + (r.errors.join(' / ') || r.results.map((x) => x.winner + ':' + x.reason).join(', ')));
+    }
+  </script>
+</body>
+</html>
