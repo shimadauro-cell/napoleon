@@ -1115,7 +1115,7 @@
   const RULE_TABS_EN = {
     flow: ['Flow', `<ol class="rules-list">
       <li><b>Deal</b>: 53 cards (with one Joker), 10 to each of 5 players. The last 3 are the face-down <b>kitty</b>.</li>
-      <li><b>Bidding</b>: bid a suit and a number (e.g. ♥13). Higher number wins; ties go ♠ &gt; ♥ &gt; ♦ &gt; ♣. When the other four pass in a row, the bid is final. That suit is <b>trump</b> and the bidder is <b>Napoleon</b>. If everyone passes, redeal.</li>
+      <li><b>Bidding</b>: bid a suit and a number, starting at 10 (e.g. ♥10). Higher number wins; ties go ♠ &gt; ♥ &gt; ♦ &gt; ♣. When the other four pass in a row, the bid is final. That suit is <b>trump</b> and the bidder is <b>Napoleon</b>. If everyone passes, redeal.</li>
       <li><b>Calling the adjutant</b>: Napoleon names one card. Whoever holds it is the <b>adjutant</b> (a secret partner) and stays hidden until playing it. If Napoleon holds it or it is in the kitty, Napoleon plays solo, 1 vs 4.</li>
       <li><b>Exchange</b>: Napoleon takes the kitty and discards 3. Discarded point cards are shown face up and go to the <b>winner of the first trick</b>.</li>
       <li><b>Play (10 tricks)</b>: Napoleon leads first. You must follow the lead suit if you can (the Joker is an exception). The player who plays the strongest card takes all five cards and leads the next trick.</li>
@@ -1150,7 +1150,7 @@
   const RULE_TABS = en ? RULE_TABS_EN : {
     flow: ['流れ', `<ol class="rules-list">
       <li><b>配る</b>：53枚（ジョーカー1枚入り）を5人に10枚ずつ。残り3枚は伏せた<b>交換札</b>。</li>
-      <li><b>競り</b>：「マーク＋枚数」で立候補（例：♥13）。強さは枚数、同じ枚数なら ♠＞♥＞♦＞♣。ほかの4人が続けてパスしたら決定。宣言したマークが<b>切札</b>、宣言者が<b>ナポレオン</b>。全員パスなら配り直し。</li>
+      <li><b>競り</b>：「マーク＋枚数」で10枚から立候補（例：♥10）。強さは枚数、同じ枚数なら ♠＞♥＞♦＞♣。ほかの4人が続けてパスしたら決定。宣言したマークが<b>切札</b>、宣言者が<b>ナポレオン</b>。全員パスなら配り直し。</li>
       <li><b>副官の指定</b>：ナポレオンが札を1枚指定。その札を持つ人が<b>副官</b>（秘密の味方）。副官はその札を出すまで正体を明かしません。自分の札や交換札の中なら1対4の単独戦。</li>
       <li><b>交換</b>：ナポレオンは交換札3枚を加え、3枚捨てる。得点札を捨てると表向きで公開され、<b>最初の巡の勝者</b>が取ります。</li>
       <li><b>札を出す（10巡）</b>：最初はナポレオンが先手。台札と同じマークを持っていれば必ず出す（ジョーカーは例外）。一番強い札の人が5枚を取り、次の先手になります。</li>

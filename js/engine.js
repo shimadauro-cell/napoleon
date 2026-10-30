@@ -79,7 +79,7 @@
 
   // ------------------------------------------------------------------ 設定
   // ルールは「ぐるぐる温泉準拠」のみ（簡略ルール・カスタム設定はなし）
-  const RULES = { minBid: 13, yoromeki: true, same2: 'second', jokerRequest: true };
+  const RULES = { minBid: 10, yoromeki: true, same2: 'second', jokerRequest: true };
   const RULE_NAME = L('ぐるぐる温泉準拠', 'Guruguru Onsen rules');
   function normalizeConfig(cfg = {}) {
     return { ...RULES, ruleName: RULE_NAME, rounds: cfg.rounds === 5 ? 5 : 1 };

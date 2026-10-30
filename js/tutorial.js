@@ -76,7 +76,7 @@
         cpu: {},
         steps: [
           { say: T('まずは<b>競り</b>。「マーク＋枚数」で立候補します。宣言した枚数は、あなた（ナポレオン）と秘密の副官の2人で取る得点札の目標です。', 'First, <b>bidding</b>. You bid a suit and a number. The number is how many point cards you (Napoleon) and your secret adjutant aim to take together.') },
-          { say: T('あなたの手札は♠がたくさん。♠を切札にすると強そうです。<br>宣言は最低13枚からです。', 'You have lots of spades. Spades as trump looks strong.<br>The minimum bid is 13.') },
+          { say: T('あなたの手札は♠がたくさん。♠を切札にすると強そうです。<br>宣言は最低10枚からです。', 'You have lots of spades. Spades as trump looks strong.<br>The minimum bid is 10.') },
           { game: true, text: T('♠を選び、枚数を決めて「宣言」しましょう（13枚がおすすめ）。', 'Choose ♠, set the number and press Bid (13 is a good choice).'), sim: { type: 'bid', seat: 0, suit: 'S', count: 13 }, deny: (a) => (a.type === 'pass' ? T('このレッスンでは宣言してみましょう（♠がおすすめ）', 'In this lesson, try making a bid (♠ recommended)') : null), until: (st) => st.phase === 'CALL_ADJUTANT' },
           { say: (st) => T(`ほかの4人がパスしたので、あなたが<b>ナポレオン</b>（切札${NP.Cards.SUIT_SYM[st.trump]}・目標${st.target}枚）！<br>次に<b>副官</b>を決める札を指定します（詳しくはレッスン5）。ここでは自分が持っていない<b>♦A</b>がおすすめ。`, `The other four passed, so you are <b>Napoleon</b> (trump ${NP.Cards.SUIT_SYM[st.trump]}, target ${st.target})!<br>Next, call the card that decides your <b>adjutant</b> (more in Lesson 5). The <b>♦A</b>, which you do not hold, is a good pick.`) },
           { game: true, text: T('副官にしたい札を選んで「この札を指定」。おすすめは<b>♦A</b>（右の一覧から選べます）。', 'Pick the card for your adjutant and press Call This Card. We suggest the <b>♦A</b> (pick it from the grid).'), sim: { type: 'call', seat: 0, card: 'D14' }, until: (st) => st.phase === 'EXCHANGE' },

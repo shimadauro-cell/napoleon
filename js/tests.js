@@ -69,9 +69,9 @@
     }
     {
       const st = createGame({ preset: 'standard' }, 'bid-min');
-      check(applyAction(st, { type: 'bid', seat: st.turn, suit: 'C', count: 13 }).ok, '競り: 最低13枚');
+      check(applyAction(st, { type: 'bid', seat: st.turn, suit: 'C', count: 10 }).ok, '競り: 最低10枚');
       const st2 = createGame({ preset: 'standard' }, 'bid-min2');
-      check(!applyAction(st2, { type: 'bid', seat: st2.turn, suit: 'S', count: 12 }).ok, '競り: 標準は12を拒否');
+      check(!applyAction(st2, { type: 'bid', seat: st2.turn, suit: 'S', count: 9 }).ok, '競り: 標準は9を拒否');
     }
 
     // ---- 3. 合法手
